@@ -1,0 +1,5 @@
+recursive-include pretix_payfip/static *
+recursive-include pretix_payfip/templates *
+recursive-include pretix_payfip/locale *
+include LICENSE
+exclude .gitlab-ci.yml

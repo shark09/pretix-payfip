@@ -1,0 +1,42 @@
+[project]
+name = "pretix-payfip"
+dynamic = ["version"]
+description = "Allow to pay on pretix using PayFip"
+readme = "README.rst"
+license = {text = "Apache"}
+keywords = ["pretix"]
+authors = [
+    {name = "Simon DALVY", email = "simon.dalvy@gmail.com"},
+]
+maintainers = [
+    {name = "Simon DALVY", email = "simon.dalvy@gmail.com"},
+]
+
+dependencies = [
+]
+
+[project.entry-points."pretix.plugin"]
+pretix_payfip = "pretix_payfip:PretixPluginMeta"
+
+[project.entry-points."distutils.commands"]
+build = "pretix_plugin_build.build:CustomBuild"
+
+[build-system]
+requires = [
+    "setuptools",
+    "pretix-plugin-build",
+]
+
+[project.urls]
+homepage = "https://github.com/shark09/pretix-payfip"
+repository = "https://github.com/shark09/pretix-payfip"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "pretix_payfip.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["pretix*"]
+namespaces = false

@@ -1,0 +1,5 @@
+[plugin]
+package = "pretix-payfip"
+modules = [ "pretix_payfip" ]
+marketplace_name = "payfip"
+
